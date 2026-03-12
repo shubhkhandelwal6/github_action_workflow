@@ -1,0 +1,17 @@
+name: Manully Triggered
+on:
+    workflow_dispatch:
+        inputs:
+            string:
+                required: true
+                description: "Enter a string"
+                type: string
+                default: "Hello World"
+
+jobs:
+    log-info:
+        runs-on: ubuntu-latest
+
+        steps:
+            - run: echo $GITHUB_REPOSITORY
+            - run: echo ${{ github.event.inputs.string }}

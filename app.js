@@ -1,0 +1,2 @@
+alert("Hello World");
+alert("How are you?");

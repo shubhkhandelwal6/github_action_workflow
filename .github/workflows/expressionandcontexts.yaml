@@ -1,0 +1,24 @@
+name: Expression and Contexts
+on: [workflow_dispatch]
+
+jobs:
+    expression:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Expression
+              run: |
+                  echo "Hello World"
+                  echo "${{ github.event_name }}"
+                  echo ${{ 1 > 2 }}
+
+            - name: Contexts
+              run: |
+                  echo "${{ github.repository }}"
+                  echo '${{job}}'
+                  echo '${{steps}}'
+                  echo '${{runner}}'
+                  echo '${{strategy}}'
+                  echo '${{matrix}}'
+                  echo '${{github}}'
+                  echo '${{env}}'
+

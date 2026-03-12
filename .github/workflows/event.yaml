@@ -1,0 +1,18 @@
+name: Repositary Events
+on: [push, pull_request, issues]
+
+jobs:
+    checkout-branch:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Github
+              run: |
+                  echo "Github Ref: $GITHUB_REF"
+                  echo "Github Event: $GITHUB_EVENT_NAME"
+                  echo "Github Event Path: $GITHUB_EVENT_PATH"
+                  echo "Github Workspace: $GITHUB_WORKSPACE"
+                  echo "Github Action: $GITHUB_ACTION"
+                  echo "Github Action Path: $GITHUB_ACTION_PATH"
+                  echo "Github SHA: $GITHUB_SHA"
+            - name: Checkout
+              uses: actions/checkout@v4

@@ -8,3 +8,5 @@ jobs:
         steps:
             - name: Setting an error message
               run: echo "::error::This is an error message"
+            - name: Setting an error message with params
+              run: echo "::error title:Error Title,file=app.js,line=1,endLine=2::This is an error message"

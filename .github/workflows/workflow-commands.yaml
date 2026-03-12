@@ -7,4 +7,4 @@ jobs:
         runs-on: ubuntu-latest
         steps:
             - name: Setting an error message
-              run: echo "error"
+              run: echo "::error::This is an error message"
